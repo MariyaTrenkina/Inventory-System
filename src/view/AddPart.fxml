@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <TextField fx:id="partIdTxt" disable="true" layoutX="258.0" layoutY="152.0" prefHeight="14.0" prefWidth="107.0" promptText="Auto Gen - Disabled">
+         <font>
+            <Font size="10.0" />
+         </font></TextField>
+      <TextField fx:id="nameTxt" layoutX="258.0" layoutY="195.0" prefHeight="14.0" prefWidth="107.0" />
+      <TextField fx:id="invTxt" layoutX="258.0" layoutY="230.0" prefHeight="14.0" prefWidth="107.0" />
+      <TextField fx:id="priceCostTxt" layoutX="255.0" layoutY="264.0" prefHeight="14.0" prefWidth="107.0" />
+      <TextField fx:id="maxTxt" layoutX="255.0" layoutY="304.0" prefHeight="14.0" prefWidth="107.0" />
+      <TextField fx:id="machineIdTxt" layoutX="255.0" layoutY="345.0" prefHeight="14.0" prefWidth="107.0" />
+      <TextField fx:id="minTxt" layoutX="439.0" layoutY="276.0" prefHeight="14.0" prefWidth="107.0" />
+      <Button fx:id="saveBtn" layoutX="284.0" layoutY="410.0" mnemonicParsing="false" onAction="#onActionSavePart" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="356.0" layoutY="410.0" mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Cancel" />
+      <RadioButton fx:id="outsourcedRadioBtn" layoutX="368.0" layoutY="76.0" mnemonicParsing="false" onAction="#partTypeCheck" text="Outsourced">
+         <toggleGroup>
+            <ToggleGroup fx:id="sourceAddPartTG" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="InHouseRadioBtn" layoutX="258.0" layoutY="76.0" mnemonicParsing="false" onAction="#partTypeCheck" selected="true" text="In-House" toggleGroup="$sourceAddPartTG" />
+      <Label fx:id="idAddPartLabel" layoutX="169.0" layoutY="156.0" text="ID" />
+      <Label fx:id="nameAddPartLabel" layoutX="169.0" layoutY="199.0" text="Name" />
+      <Label fx:id="invAddPartLabel" layoutX="169.0" layoutY="234.0" text="Inv" />
+      <Label fx:id="priceAddPartCostLabel" layoutX="169.0" layoutY="256.0" prefHeight="42.0" prefWidth="70.0" text="Price/Cost" />
+      <Label fx:id="maxAddPartLabel" layoutX="166.0" layoutY="308.0" text="Max" />
+      <Label fx:id="machineIdAddPartLabel" layoutX="166.0" layoutY="349.0" text="Machine ID" />
+      <Label fx:id="minAddPartLabel" layoutX="385.0" layoutY="281.0" text="Min" />
+      <Label layoutX="66.0" layoutY="71.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
